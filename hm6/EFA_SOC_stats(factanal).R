@@ -61,6 +61,7 @@ colnames(empty)<-paste0("xC",1:ncol(R))
 ############################################################
 # decomposition analysis
 fit.4.varimax<-factanal(covmat=R,factors=4,rotation="varimax")
+fit.4.Enzmann<-fa.promax(covmat=R,factors=1,n.obs=100)
 
 print(fit.4.varimax)
 

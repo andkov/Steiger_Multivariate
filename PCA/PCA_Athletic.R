@@ -26,7 +26,7 @@ colnames(empty)<-paste0("xC",1:ncol(R))
 pathScree<-file.path(getwd(),"functions","scree.R")
 pathPattern<-file.path(getwd(),"functions","factor pattern.R")
 colors<- c("darksalmon" ,"lightskyblue")
-
+fa.promax
 # solutions   [1]       [2]        [3]
 solution<-c("eigen()", "svd()","principal()","factanal()")
 whatsolution<- solution[3] #!!! Choose !!!#
