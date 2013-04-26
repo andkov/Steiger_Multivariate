@@ -1,0 +1,33 @@
+digraph Factor  {
+  rankdir=RL;
+  size="8,6";
+  node [fontname="Helvetica" fontsize=14 shape=box, width=2];
+  edge [fontname="Helvetica" fontsize=10];
+V1  [label = "SCI01"];
+V2  [label = "SCI02"];
+V3  [label = "SCI03"];
+V4  [label = "SCI04"];
+V5  [label = "SCI05"];
+V6  [label = "SCI06"];
+V7  [label = "SCI07"];
+V8  [label = "SCI08"];
+V9  [label = "SCI09"];
+V10  [label = "SCI10"];
+V11  [label = "SCI11"];
+V12  [label = "SCI12"];
+node [shape=ellipse, width ="1"];
+PC1-> V1 [ label = 0.6 ];
+PC1-> V3 [ label = 0.3 ];
+PC1-> V5 [ label = 0.6 ];
+PC1-> V9 [ label = 0.6 ];
+PC1-> V10 [ label = 0.6 ];
+PC1-> V12 [ label = 0.6 ];
+PC2-> V2 [ label = 0.5 ];
+PC2-> V4 [ label = -0.5 ];
+PC2-> V11 [ label = 0.5 ];
+PC3-> V6 [ label = 0.5 ];
+PC3-> V8 [ label = 0.5 ];
+PC4-> V7 [ label = 0.7 ];
+{ rank=same;
+V1;V2;V3;V4;V5;V6;V7;V8;V9;V10;V11;V12;}{ rank=same;
+PC1;PC2;PC3;PC4;}}

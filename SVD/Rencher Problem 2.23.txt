@@ -1,0 +1,13 @@
+## 2.23
+A <- matrix(c(4,-5,-1,7,-2,3,-1,4,-3,8,2,6), 4,3, byrow=TRUE)
+A.Aprime <- A%*%t(A)
+Aprime.A <- t(A) %*% A
+U <- eigen(A.Aprime)$vectors[,1:3]
+V <- eigen(Aprime.A)$vectors
+D <- diag(sqrt(eigen(Aprime.A)$values))
+U %*% D %*% t(V)
+D.signed <- zapsmall( t(U) %*% A %*% V)
+U %*% D.signed %*% t(V)
+V <- V %*% sign(D.signed)
+U %*% D %*% t(V)
+

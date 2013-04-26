@@ -1,0 +1,20 @@
+library(psych)
+library(plotrix)
+R <- as.matrix(Harman74.cor$cov)
+Scree.Plot(R,main="SCREE Plot\n24 Psychological Variables Data (n=145)")
+
+FA.Stats(R,n.factors=1:5,n.obs=145,
+           main="RMSEA Plot\n24 Psychological Variables Data  (n=145)",
+           RMSEA.cutoff=0.05)
+out <- MLFA(Correlation.Matrix=R,n.factors=4,n.obs=145,promax.m=3)
+Loadings(out,cutoff=.3,num.digits=2)
+
+out$Varimax
+print.FLS(out$Varimax,cutoff=.3,num.digits=2)
+Loadings(out,cutoff=0.3,num.digits=2)
+
+data(Thurstone)
+Scree.Plot(Thurstone)
+FA.Stats(Thurstone,n.factors=1:3,n.obs=213)
+out.2 <- MLFA(Correlation.Matrix=Thurstone,n.factors=3,n.obs=213,promax.m=4)
+out.Thurstone
