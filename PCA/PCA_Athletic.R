@@ -17,6 +17,7 @@ attach(AthleticsData)
 
 R<-cor(AthleticsData) # correlation matrix R of variables in AthleticsData
 S<-cov(AthleticsData) # covariance matrix S of variables in AthleticsData)
+#########################################################################
 
 empty<-matrix(numeric(0),ncol(R),ncol(R))
 rownames(empty)<-rownames(R)

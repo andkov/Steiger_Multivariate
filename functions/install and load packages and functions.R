@@ -15,6 +15,8 @@ install.packages("fortify")
 install.packages("ddply")
 install.packages("corrplot")
 isntall.packages("FactoMineR")
+install.packages("GPArotation") # Bernaard & Jenrich, 2005
+
 
 
 
